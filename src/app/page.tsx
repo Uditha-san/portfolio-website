@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { 
   Github, 
   Linkedin, 
@@ -16,7 +16,7 @@ import {
 
 // --- Advanced Animation Variants ---
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
@@ -28,12 +28,12 @@ const fadeUp = {
   }
 };
 
-const slideInRight = {
+const slideInRight: Variants = {
   hidden: { opacity: 0, x: -50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -44,7 +44,7 @@ const staggerContainer = {
   }
 };
 
-const cardHover = {
+const cardHover: Variants = {
   rest: { scale: 1, y: 0, boxShadow: "0px 0px 0px rgba(0,0,0,0)" },
   hover: { 
     scale: 1.02, 
